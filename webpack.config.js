@@ -1,5 +1,16 @@
 var path = require('path')
-var webpack = require('webpack')
+var webpack = require('webpack');
+
+const CopyPlugin = require('copy-webpack-plugin');
+
+module.exports = {
+  plugins: [
+    new CopyPlugin([
+      { from: 'source', to: 'dest' },
+      { from: 'other', to: 'public' },
+    ]),
+  ],
+};
 
 module.exports = {
   entry: './src/main.js',

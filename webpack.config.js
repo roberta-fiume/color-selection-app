@@ -5,13 +5,12 @@ const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
   plugins: [
-    module.exports = {
-      plugins: [
-        new CopyWebpackPlugin([
-          { from: './index/html', to: 'relative/path/to/dest/' }
-        ])
-      ]
-  },
+    new CopyPlugin([
+      { from: 'source', to: 'dest' },
+      { from: 'other', to: 'public' },
+    ]),
+  ],
+};
 
 module.exports = {
   entry: './src/main.js',
